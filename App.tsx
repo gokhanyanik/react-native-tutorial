@@ -57,12 +57,29 @@ function Section({children, title}: SectionProps): JSX.Element {
 
 function App(): JSX.Element {
   
- 
+  
   
   return (
     <SafeAreaView style={styles.background}>
-      <Text>hello world</Text>
-      <Text>hello world2</Text>
+      <Text onPress={()=> console.log("hello world")}>hello world</Text>   
+     
+     
+      <Text numberOfLines={2}>
+        ı work in react ı work in react ı work in react ı work in react ı work in react ı work in react ı work in react ı work in react ı work in react
+      </Text>
+
+      <Text style={{color:'yellow',fontWeight:'bold'}}>
+
+        merhaba 
+        {"\n"}
+        {"\n"}
+        <Text style={{color:'blue'}}>fenerbahçe </Text>
+        {"\n"}
+        {"\n"}
+        severler
+
+
+      </Text>
     </SafeAreaView>
   );
   
@@ -72,7 +89,7 @@ function App(): JSX.Element {
 const styles = StyleSheet.create({
   background:{
     flex:1,
-    backgroundColor:'yellow',
+    backgroundColor:'red',
     
   }
 });
