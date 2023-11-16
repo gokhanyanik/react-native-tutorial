@@ -15,6 +15,7 @@ import {
   Text,
   useColorScheme,
   View,
+  Image,
 } from 'react-native';
 
 import {
@@ -60,6 +61,7 @@ function App(): JSX.Element {
   
   
   return (
+    
     <SafeAreaView style={styles.background}>
       <Text onPress={()=> console.log("hello world")}>hello world</Text>   
      
@@ -71,15 +73,23 @@ function App(): JSX.Element {
       <Text style={{color:'yellow',fontWeight:'bold'}}>
 
         merhaba 
-        {"\n"}
+        {"\n"}   {/*bir alt satıra geçer.*/ }
         {"\n"}
         <Text style={{color:'blue'}}>fenerbahçe </Text>
         {"\n"}
         {"\n"}
         severler
-
-
       </Text>
+
+      <Image
+      source={{uri:"https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltdc07f051caa5cdf6/625adf7b956c474ead99e528/DepoPhotos_14812567_(1).jpg?auto=webp&format=pjpg&width=640&quality=60",
+              width:400,
+              height:600,
+              }}
+              resizeMode='contain'
+              fadeDuration={6000}
+              
+      />
     </SafeAreaView>
   );
   
@@ -89,7 +99,7 @@ function App(): JSX.Element {
 const styles = StyleSheet.create({
   background:{
     flex:1,
-    backgroundColor:'red',
+    backgroundColor:'white',
     
   }
 });
