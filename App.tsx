@@ -5,8 +5,8 @@
  * @format
  */
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
+import React ,{useState} from 'react';
+import type { PropsWithChildren } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -15,9 +15,8 @@ import {
   Text,
   useColorScheme,
   View,
-  Image,
-  TouchableHighlight,
-  TouchableOpacity,
+  TextInput,
+
 } from 'react-native';
 
 import {
@@ -32,7 +31,7 @@ type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
-function Section({children, title}: SectionProps): JSX.Element {
+function Section({ children, title }: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
@@ -59,58 +58,40 @@ function Section({children, title}: SectionProps): JSX.Element {
 }
 
 function App(): JSX.Element {
-  
-  
-  
+
+   const [text, setText]=useState("")
+
   return (
-    
+
     <SafeAreaView style={styles.background}>
-      <Text onPress={()=> console.log("hello world")}>hello world</Text>   
-     
-     
-      <Text numberOfLines={2}>
-        ı work in react ı work in react ı work in react ı work in react ı work in react ı work in react ı work in react ı work in react ı work in react
-      </Text>
+      {/*placeholder=kutunun içinde görünen yazı. Girilmesini istediğimiz bilgi açıklaması 
+         padding= metnin sol kenar boşluğu
+         */}
+      <TextInput
+        style={{ width: 200, height: 50, borderWidth: 1, padding: 7 }}
+        placeholder='what your name?'
+        value={text}
+        onChangeText={(e)=>setText(e)}
+        secureTextEntry={true}
 
-      <Text style={{color:'yellow',fontWeight:'bold'}}>
-
-        merhaba 
-        {"\n"}   {/*bir alt satıra geçer.*/ }
-        {"\n"}
-        <Text style={{color:'blue'}}>fenerbahçe </Text>
-        {"\n"}
-        {"\n"}
-        severler
-      </Text>
-
-      <Image
-      source={{uri:"https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltdc07f051caa5cdf6/625adf7b956c474ead99e528/DepoPhotos_14812567_(1).jpg?auto=webp&format=pjpg&width=640&quality=60",
-              width:400,
-              height:100,
-              }}
-              resizeMode='contain'
-              fadeDuration={6000}
-              
       />
-      <TouchableHighlight onPress={()=> console.log("Open eyes!!")} >
-      <View style={{width:'100%', height:75, backgroundColor:'cyan'}}></View>
-      </TouchableHighlight>
-      <TouchableOpacity onPress={()=> console.log("reactnative!!")} >
-      <View style={{width:'100%', height:75, backgroundColor:'red'}}></View>
-      </TouchableOpacity>
-      
+
     </SafeAreaView>
   );
-  
-   
+
+
 }
 
 const styles = StyleSheet.create({
-  background:{
-    flex:1,
-    backgroundColor:'white',
-    
+  background: {
+
+    backgroundColor: 'lightgrey',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+
   }
+
 });
 
 export default App;
