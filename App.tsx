@@ -5,7 +5,7 @@
  * @format
  */
 
-import React ,{useState} from 'react';
+import React, { useState } from 'react';
 import type { PropsWithChildren } from 'react';
 import {
   SafeAreaView,
@@ -17,6 +17,8 @@ import {
   View,
   TextInput,
   Button,
+  Alert
+
 
 } from 'react-native';
 
@@ -60,7 +62,7 @@ function Section({ children, title }: SectionProps): JSX.Element {
 
 function App(): JSX.Element {
 
-   const [text, setText]=useState("")
+  const [text, setText] = useState("")
 
   return (
 
@@ -72,12 +74,20 @@ function App(): JSX.Element {
         style={{ width: 200, height: 50, borderWidth: 1, padding: 7 }}
         placeholder='what your name?'
         value={text}
-        onChangeText={(e)=>setText(e)}
+        onChangeText={(e) => setText(e)}
         secureTextEntry={true}
       />
       <Button
-      title="Press me!"
-      onPress={()=> console.log('Butona basildi')}
+        title="Press me!"
+        onPress={() => Alert.alert("hello" + text, "do you enjoy the tutorial?",
+          [
+
+            { text: "yes", onPress: () => console.log("yes dediniz") },
+            { text: "hell yess!!!", onPress: () => console.log("hell yess dediniz") }
+
+          ]
+        )}
+
       />
 
     </SafeAreaView>
