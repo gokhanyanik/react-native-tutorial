@@ -16,6 +16,7 @@ import {
   useColorScheme,
   View,
   TextInput,
+  Button,
 
 } from 'react-native';
 
@@ -73,7 +74,10 @@ function App(): JSX.Element {
         value={text}
         onChangeText={(e)=>setText(e)}
         secureTextEntry={true}
-
+      />
+      <Button
+      title="Press me!"
+      onPress={()=> console.log('Butona basildi')}
       />
 
     </SafeAreaView>
