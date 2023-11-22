@@ -17,7 +17,8 @@ import {
   View,
   TextInput,
   Button,
-  Alert
+  Alert,
+ 
 
 
 } from 'react-native';
@@ -67,28 +68,26 @@ function App(): JSX.Element {
   return (
 
     <SafeAreaView style={styles.background}>
-      {/*placeholder=kutunun içinde görünen yazı. Girilmesini istediğimiz bilgi açıklaması 
-         padding= metnin sol kenar boşluğu
-         */}
-      <TextInput
-        style={{ width: 200, height: 50, borderWidth: 1, padding: 7 }}
-        placeholder='what your name?'
-        value={text}
-        onChangeText={(e) => setText(e)}
-        secureTextEntry={true}
-      />
-      <Button
-        title="Press me!"
-        onPress={() => Alert.alert("hello" + text, "do you enjoy the tutorial?",
-          [
+       <ScrollView> 
+      <Text style={{fontSize:30}}>
+        Türk Edebiyatında düz yazı olan metin türlerinin ayrı bir yeri vardır. Metinler, şiirler gibi uyak ve ahenge bağlı kalmadan, direk yazıya dökülüyorlar. Bilgi, duygu ve düşüncelerin yansıtılması ve aktarılması bakımından önemlidirler. Bu nedenle metin türlerini iyi öğrenip, kültürünüzü geliştirebilirsiniz. Hatta düz yazı örnekleri üretebilirsiniz. Örnekleriyle birlikte edebi yazı türlerini derledik.
+        Türk Edebiyatında düz yazı olan metin türlerinin ayrı bir yeri vardır. Metinler, şiirler gibi uyak ve ahenge bağlı kalmadan, direk yazıya dökülüyorlar. Bilgi, duygu ve düşüncelerin yansıtılması ve aktarılması bakımından önemlidirler. Bu nedenle metin türlerini iyi öğrenip, kültürünüzü geliştirebilirsiniz. Hatta düz yazı örnekleri üretebilirsiniz. Örnekleriyle birlikte edebi yazı türlerini derledik.
+        Türk Edebiyatında düz yazı olan metin türlerinin ayrı bir yeri vardır. Metinler, şiirler gibi uyak ve ahenge bağlı kalmadan, direk yazıya dökülüyorlar. Bilgi, duygu ve düşüncelerin yansıtılması ve aktarılması bakımından önemlidirler. Bu nedenle metin türlerini iyi öğrenip, kültürünüzü geliştirebilirsiniz. Hatta düz yazı örnekleri üretebilirsiniz. Örnekleriyle birlikte edebi yazı türlerini derledik.
+        Türk Edebiyatında düz yazı olan metin türlerinin ayrı bir yeri vardır. Metinler, şiirler gibi uyak ve ahenge bağlı kalmadan, direk yazıya dökülüyorlar. Bilgi, duygu ve düşüncelerin yansıtılması ve aktarılması bakımından önemlidirler. Bu nedenle metin türlerini iyi öğrenip, kültürünüzü geliştirebilirsiniz. Hatta düz yazı örnekleri üretebilirsiniz. Örnekleriyle birlikte edebi yazı türlerini derledik.
+        Türk Edebiyatında düz yazı olan metin türlerinin ayrı bir yeri vardır. Metinler, şiirler gibi uyak ve ahenge bağlı kalmadan, direk yazıya dökülüyorlar. Bilgi, duygu ve düşüncelerin yansıtılması ve aktarılması bakımından önemlidirler. Bu nedenle metin türlerini iyi öğrenip, kültürünüzü geliştirebilirsiniz. Hatta düz yazı örnekleri üretebilirsiniz. Örnekleriyle birlikte edebi yazı türlerini derledik.
+        Türk Edebiyatında düz yazı olan metin türlerinin ayrı bir yeri vardır. Metinler, şiirler gibi uyak ve ahenge bağlı kalmadan, direk yazıya dökülüyorlar. Bilgi, duygu ve düşüncelerin yansıtılması ve aktarılması bakımından önemlidirler. Bu nedenle metin türlerini iyi öğrenip, kültürünüzü geliştirebilirsiniz. Hatta düz yazı örnekleri üretebilirsiniz. Örnekleriyle birlikte edebi yazı türlerini derledik.
+        Türk Edebiyatında düz yazı olan metin türlerinin ayrı bir yeri vardır. Metinler, şiirler gibi uyak ve ahenge bağlı kalmadan, direk yazıya dökülüyorlar. Bilgi, duygu ve düşüncelerin yansıtılması ve aktarılması bakımından önemlidirler. Bu nedenle metin türlerini iyi öğrenip, kültürünüzü geliştirebilirsiniz. Hatta düz yazı örnekleri üretebilirsiniz. Örnekleriyle birlikte edebi yazı türlerini derledik.
+        Türk Edebiyatında düz yazı olan metin türlerinin ayrı bir yeri vardır. Metinler, şiirler gibi uyak ve ahenge bağlı kalmadan, direk yazıya dökülüyorlar. Bilgi, duygu ve düşüncelerin yansıtılması ve aktarılması bakımından önemlidirler. Bu nedenle metin türlerini iyi öğrenip, kültürünüzü geliştirebilirsiniz. Hatta düz yazı örnekleri üretebilirsiniz. Örnekleriyle birlikte edebi yazı türlerini derledik.
 
-            { text: "yes", onPress: () => console.log("yes dediniz") },
-            { text: "hell yess!!!", onPress: () => console.log("hell yess dediniz") }
 
-          ]
-        )}
+      </Text>
 
-      />
+       </ScrollView>
+
+
+
+
+
 
     </SafeAreaView>
   );
