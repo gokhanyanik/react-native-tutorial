@@ -16,10 +16,7 @@ import {
   useColorScheme,
   View,
   FlatList,
-
-
-
-
+  RefreshControl,
 } from 'react-native';
 
 import {
@@ -117,27 +114,27 @@ function App(): JSX.Element {
 
   const [text, setText] = useState("")
 
+  const [refreshing, setRefreshing] = useState(false)
+
+  const _onRefresh = () => {
+
+    setRefreshing(true)
+  }
+  setTimeout(() => {
+    setRefreshing(false)
+  }, 2000);
+
   return (
 
+
     <SafeAreaView style={styles.background}>
-
-
-
       <FlatList
-
         data={dataList}
-        // renderItem={(p)=>{
-        //   console.log(p.item)
-        // }}
-
         renderItem={({ item }) =>
           <Text style={{ fontSize: 30, fontWeight: 'bold', borderWidth: 1, borderColor: 'blue', marginVertical: 10 }}>{item.title} </Text>}
-          keyExtractor={item=>String(item.id)}
-
+        keyExtractor={item => String(item.id)}
+        refreshControl={<RefreshControl refreshing={refreshing} onRefresh={_onRefresh} />}
       />
-
-
-
 
     </SafeAreaView>
   );
