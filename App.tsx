@@ -3,28 +3,27 @@ import {
   SafeAreaView,
   StyleSheet,
   Text,
+  Platform,
 } from 'react-native';
 
 function App(): JSX.Element {
   return (
     <SafeAreaView style={styles.background}>
-      {/* <Text style={{color:'blue',background.Text}}> StyleSheet deneme metni</Text> yanlış!!! */}
-      <Text style={[styles.text,styles.metin]}> StyleSheet deneme metni</Text>
-      <Text style={styles.text}> StyleSheet deneme metni</Text>
-      <Text style={[styles.text,styles.metin2]}> StyleSheet deneme metni</Text>
+      <Text style={[styles.text,styles.metin]}> Bu bir {Platform.OS} uygulamasidir </Text>
+ 
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   background: {
-    backgroundColor: 'yellow',
+    backgroundColor: Platform.OS==="ios" ? "yellow" : "green",
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
   text: {
-    color: 'blue',
+    color: 'white',
     fontSize: 25
   },
   metin:{
