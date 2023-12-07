@@ -5,78 +5,54 @@ import {
   Text,
   Platform,
   View,
+  Image,
 } from 'react-native';
 
 function App(): JSX.Element {
   return (
-    <SafeAreaView style={styles.background}>
-      <View style={styles.style1}>
-        <Text style={styles.text}>Burada birinci view olacak ve içeriği title olmali</Text>
-      </View>
-      <View style={styles.style2}>
-        <Text>Burada ikinci view olacak ve içeriği image olmali</Text>
-      </View>
-      <View style={styles.style3}>
-        <Text style={styles.text2}>Burada üçüncü view olacak ve içeriği text olmali</Text>
-      </View>
-      <View style={styles.style4}>
-        <Text style={styles.text2}>Burada dördüncü view olacak ve içeriği textinput olmali</Text>
-      </View>
-      <View style={styles.style5}>
-        <Text style={styles.text}>Burada beşinci view olacak ve içeriği button olmali</Text>
-      </View>
-    </SafeAreaView>
+    <View style={styles.container}>
+    <View style={styles.top}>
+     <View style={styles.middle}>
+       <View style={styles.bottom}/>
+       <View style={styles.bottom}>
+         <View style={styles.middle}/>
+         <View style={styles.middle}/>
+       </View>
+     </View>
+     <View style={styles.middle}/>
+    </View>
+  </View>
   );
 }
 const styles = StyleSheet.create({
-  background: {
-    backgroundColor: 'white',
+  container: {
     flex: 1,
+    backgroundColor: '#fff',
+    padding: 20,
+    margin: 10,
+    borderWidth:5
+    
   },
-  style1: {
-    backgroundColor: 'yellow',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 100,
-    flex: 1
+  top: {
+    flex: 0.8,
+    backgroundColor: 'grey',
+    borderWidth: 5,
+   
   },
-  style2: {
-    backgroundColor: 'red',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 150,
-    flex: 4
+  middle: {
+    flex: 0.5,
+    backgroundColor: 'beige',
+    borderWidth: 3,
+    margin: 10,
+    flexDirection:'row'
+    
   },
-  style3: {
-    backgroundColor: 'blue',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 130,
-    flex: 4
+  bottom: {
+    flex: 0.5,
+    backgroundColor: 'pink',
+    borderWidth: 3,
+    
   },
-  style4: {
-    backgroundColor: 'green',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 70,
-    flex: 1
-  },
-  style5: {
-    backgroundColor: 'white',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 70,
-    flex: 1
-  },
-  text: {
-    fontSize: 15,
-    fontWeight: 'bold'
-  },
-  text2: {
-    color: 'white',
-    fontSize: 20,
-    fontWeight: 'bold'
-  }
 });
 
 export default App;
