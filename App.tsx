@@ -7,58 +7,25 @@ import {
   View,
   Image,
 } from 'react-native';
+import Card from './components/Card'
 
 function App(): JSX.Element {
   return (
     <View style={styles.container}>
-    <View style={styles.top}>
-     <View style={styles.middle}>
-       <View style={styles.bottom}>
-       <Image
-         source={{uri:'https://minio.yalispor.com.tr/yalispor/blog/alex-de-souza-kimdir-1_606ee18018d64.jpg'}}
-         style={{height:250,width:200,alignItems:'flex-start'}}
-       /> 
-       </View>
-       <View style={styles.bottom}>
-         <View style={styles.middle}>
-             <Text style={{textAlign:'center',fontWeight:'bold'}}>ALEX DE SOUZA</Text>
-         </View>
-         <View style={styles.middle}>
-         <Text numberOfLines={2} style={{alignItems:'center'}}>For stretch to have an effect, children must not have a fixed dimension along the secondary axis.</Text>
-         </View>
-       </View>
-     </View>
-     <View style={styles.middle}>
-       <Text>
-       For stretch to have an effect, children must not have a fixed dimension along the secondary axis. In the following example, setting alignItems: stretch does nothing until the width: 50 is removed from the children.
-       </Text>
-     
-     </View>
+      <Card star={'TADİÇ'} aciklama={'tadiç on fire'} paragraf={'tadiç tadiç tadi. tadiç'} resim="https://tmssl.akamaized.net/images/foto/newsansicht/dusan-tadic-fenernahce-2023-24-1689579033-111706.jpg?lm=1689579051" />
+      <Card star={'DZEKO'} aciklama={' Boşnak millî futbolcudur. Forvet pozisyonunda görev yapan oyuncu, Süper Lig takımlarından Fenerbahçede forma giymektedir'} paragraf={'jeko jeko jeko jeko'} resim="https://cdn1.ntv.com.tr/gorsel/u1cvKpvuxUKsvkB2b-AjgQ.jpg?width=952&height=540&mode=both&scale=both" />
+      <Card star={'KAPTAN'} aciklama={'Dzeko büyük kaptan'} paragraf={'kaptan kaptan kaptan'} resim="https://pbs.twimg.com/media/FzPaAOrXwAkFIH1.jpg" />
+      <Card star={'İrfan Can Kahveci'} aciklama={'süper bilek'} paragraf={'kaptan kaptan kaptan'} resim="https://pbs.twimg.com/media/FzPaAOrXwAkFIH1.jpg" />
     </View>
-  </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    padding: 20,
+    padding: 5,
     margin: 10,
- },
-   top: {
-    flex: 0.8,
-    backgroundColor: 'grey',
- },
-   middle: {
-    flex: 0.5,
-    backgroundColor: 'white',
-    margin: 10,
-    flexDirection:'row'
- },
-   bottom: {
-    flex: 0.5,
-    backgroundColor: 'white',
- },
+  }
 });
 
 export default App;
