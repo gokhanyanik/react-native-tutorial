@@ -13,8 +13,8 @@ function App(): JSX.Element {
   return (
     <SafeAreaView style={styles.container}>
 
-       <View style={{height:100,flexBasis:75,flexGrow:1,backgroundColor:'purple'}}/>
-       <View style={{height:100,width:75,backgroundColor:'yellow'}}/>
+       <View style={{height:100,width:75,backgroundColor:'purple'}}/>
+       <View style={{height:100,width:75,backgroundColor:'yellow',bottom:20,left:20,position:'absolute'}}/>
        <View style={{height:100,width:75,backgroundColor:'orange'}}/>
        
       
