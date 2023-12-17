@@ -11,38 +11,13 @@ import {
 
 
 function App(): JSX.Element {
-  const [sayi, setSayi] = useState(0)
-
-  useEffect(()=>{
-    console.log("update edilen useeffect değeri",sayi)
-  })
-  useEffect(()=>{
-    console.log("ilk render edilen useeffecti")
-  },[])
-  useEffect(()=>{
-    console.log("sayı değeri her değiştiğinde çalış",sayi)
-  },[sayi])
-
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity
-        onPress={() => {
-          setSayi(sayi + 1)
-         
-        }}
-        style={[styles.touchable, { backgroundColor: '#0f0' }]}>
-        <Text style={styles.text}>+</Text>
-      </TouchableOpacity>
-      <Text style={{ fontSize: 40 }}>{sayi} </Text>
-      <TouchableOpacity
-        onPress={() => {
-          setSayi(sayi - 1)
-         
-        }}
-        style={[styles.touchable, { backgroundColor: 'red' }]}>
-        <Text style={styles.text}>-</Text>
-      </TouchableOpacity>
+    <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+<Image source={require('./coffeeCup.png')}
+style={{width:300,height:300}}
+/>
+<Text style={{fontSize:30,fontWeight:'bold',textDecorationLine:'underline'}}> Coffee Hub </Text>
 
     </View>
 
