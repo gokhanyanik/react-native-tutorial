@@ -7,6 +7,9 @@ import {
 } from 'react-native';
 
 import Menu from './components/Menu';
+import Contents from './components/Contents';
+
+
 
 function App(): JSX.Element {
 
@@ -15,21 +18,17 @@ function App(): JSX.Element {
   const resimC = require('./assets/coffee_icon.png');
   const resimD = require('./assets/coffee_cup_drink.png');
 
-  return (
-    <View style={styles.container}>
-      <View style={styles.child}>
-        <Image source={require('./assets/menu_left_icon.png')}
-          style={styles.image}
-        />
-        <Image source={require('./assets/search_icon.png')}
-          style={styles.image}
-        />
-      </View>
-      <Text style={styles.text}>It's Greed Day For Coffee</Text>
+  const resim1 = require('./assets/arrow_icon.png');
+  const resim2=require('./assets/coffee_cup_drink.png');
 
-      <Menu resim={resimA} isim={'Macchiato'} resim2={resimB} />
-      <Menu resim={resimC} isim={'Espresso'} resim2={resimB} />
-      <Menu resim={resimD} isim={'Latte'} resim2={resimB} />
+
+  return (
+    <View style={{flex:1}}>
+      
+
+      
+      <Contents imageLeft={resim1} menuName={'Maciatto'} image={resim2} name={'Maciatto'} price={200}/>
+
 
     </View>
   );
